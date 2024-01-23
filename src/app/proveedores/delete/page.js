@@ -1,4 +1,4 @@
-import Form from "@/components/Form"
+import Form from "@/components/formProveedores"
 import { sql } from '@vercel/postgres';
 import { deleteProveedor } from "@/lib/actions"
 
@@ -11,7 +11,7 @@ async function page({ searchParams }) {
   return (
     <div>
       <h3>Eliminar proveedor {searchParams.id}</h3>
-      <Form action={deleteProveedor} title='Eliminar artículo' proveedor={proveedor} disabled={true} />
+      <Form action={deleteProveedor} title='Eliminar proveedor' proveedor={proveedor} disabled={true} />
     </div>
   )
 }

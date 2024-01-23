@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Articulo from '@/components/Proveedor'
+import Proveedor from '@/components/Proveedor'
 import { getProveedores } from '@/lib/actions'
 
 export const dynamic = 'force-dynamic'

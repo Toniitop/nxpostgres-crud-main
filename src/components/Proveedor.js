@@ -3,9 +3,9 @@
 function Proveedor({ children, proveedor }) {
     return (
         <div style={{ 'border': '1px solid lightgrey', 'padding': '50px' }}>
-            <p><strong>{proveedor.nombre}</strong></p>
-            <p>{proveedor.descripcion}</p>
-            <p>{proveedor.precio} €</p>
+            <p><strong>{proveedor.id}</strong></p>
+            <p>{proveedor.nombre}</p>
+            <p>{proveedor.telefono} €</p>
             {children}
         </div>
     )

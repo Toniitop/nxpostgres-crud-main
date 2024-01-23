@@ -1,5 +1,5 @@
 import Button from '@/components/Button'
- 
+
 function Form({ action, title, articulo, disabled }) {
 
     return (

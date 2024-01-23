@@ -15,6 +15,20 @@ async function crearTabla() {
     } catch (error) {
         console.log(error);
     }
+
+    try {
+        const result = await sql`
+        CREATE TABLE IF NOT EXISTS proveedores (
+            id SERIAL PRIMARY KEY,
+            nombre TEXT NOT NULL,
+            telefono VARCHAR(15) NOT NULL,
+            createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        );        
+        `;
+        console.log(result);
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 crearTabla();
