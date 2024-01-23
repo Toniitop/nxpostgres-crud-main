@@ -43,15 +43,14 @@ export async function newArticulo(formData) {
 
 export async function newProveedor(formData) {
   try {
-    const id = formData.get('id');
     const nombre = formData.get('nombre');
     const telefono = formData.get('telefono');
 
     const results = await sql`
-    insert into articulos(id,nombre,telefono) values (${id}, ${nombre}, ${telefono});
+    insert into proveedores(nombre,telefono) values (${nombre}, ${telefono});
     `
     console.log(results);
-    revalidatePath('/articulos')
+    revalidatePath('/proveedores')
   } catch (error) {
     console.log(error);
   }
